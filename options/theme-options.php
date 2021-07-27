@@ -1147,7 +1147,7 @@ if( class_exists( 'CSF' ) ) {
       array(
         'id' => 'cover_switch',
         'type' => 'switcher',
-        'title' => __('Cover','csf'),
+        'title' => __('Cover Switch','csf'),
         'label' => __('On by default, if off, all options below will be disabled','csf'),
         'default' => true
       ),
@@ -1173,7 +1173,7 @@ if( class_exists( 'CSF' ) ) {
         'id' => 'cover_radius',
         'type' => 'slider',
         'title' => __('Cover Radius','csf'),
-        'desc' => __('Slide to adjust, recommended value range is 15-20','csf'),
+        'desc' => __('Slide to adjust, the recommended value range is 15-20','csf'),
         'unit' => 'px',
         'max' => '60',
         'default' => '15'
@@ -1239,7 +1239,7 @@ if( class_exists( 'CSF' ) ) {
         'id' => 'signature_radius',
         'type' => 'slider',
         'title' => __('Cover signature bar rounded','csf'),
-        'desc' => __('slider, recommended value range 10-20','csf'),
+        'desc' => __('Slide to adjust, the recommended value range 10-20','csf'),
         'unit' => 'px',
         'max' => '50',
         'default' => '15'
@@ -1250,7 +1250,7 @@ if( class_exists( 'CSF' ) ) {
         'type' => 'text',
         'title' => __('Cover Signature Field Text','csf'),
         'desc' => __('A self-descriptive quote','csf'),
-        'default' => '本当の声音を響かせてよ'
+        'default' => '本当の声を響かせてよ'
       ),
 
       array(
@@ -1265,7 +1265,7 @@ if( class_exists( 'CSF' ) ) {
         'id' => 'signature_font_size',
         'type' => 'slider',
         'title' => __('Cover Signature Field Text Font Size','csf'),
-        'desc' => __('Slide to adjust, recommended value range is 15-18','csf'),
+        'desc' => __('Slide to adjust, the recommended value range is 15-18','csf'),
         'unit' => 'px',
         'min' => '5',
         'max' => '20',
@@ -1408,7 +1408,7 @@ if( class_exists( 'CSF' ) ) {
       array(
         'id' => 'drop_down_arrow_dark_color',
         'type' => 'color',
-        'title' => __('Cover Dropdown Arrow Color in Dark Mode ','csf'),
+        'title' => __('Cover Dropdown Arrow Color (Dark Mode)','csf'),
         'dependency' => array( 'drop_down_arrow', '==', 'true' ),
         'desc' => __('Customize the colors, dark colors are recommended','csf'),
         'default' => 'rgba(51,51,51,0.8)'
@@ -1452,13 +1452,13 @@ if( class_exists( 'CSF' ) ) {
 
   CSF::createSection( $prefix, array(
     'parent' => 'homepage', 
-    'title' => __('Cover Social Area Settings','csf'),
+    'title' => __('Cover Social Area Options','csf'),
     'icon' => 'fa fa-share-square-o',
     'fields' => array(
 
       array(
         'type' => 'subheading',
-        'content' => __('Options','csf'),
+        'content' => __('Related Options','csf'),
       ),
 
       array(
@@ -1656,7 +1656,7 @@ if( class_exists( 'CSF' ) ) {
       array(
         'id'     => 'socialdiy1',
         'type'   => 'text',
-        'title' => __('Customized social networkⅠ','csf'),
+        'title' => __('Customized social network Ⅰ','csf'),
         'dependency' => array( 'social_area', '==', 'true' ),
         'desc' => __('add URL','csf'),
       ),
@@ -1708,7 +1708,7 @@ if( class_exists( 'CSF' ) ) {
 
   CSF::createSection( $prefix, array(
     'parent' => 'homepage', 
-    'title' => __('Bulletin Board and Area Title Settings','csf'),
+    'title' => __('Bulletin Board and Area Title Options','csf'),
     'icon' => 'fa fa-bullhorn',
     'fields' => array(
 
@@ -1720,7 +1720,7 @@ if( class_exists( 'CSF' ) ) {
       array(
         'id' => 'announce_bar',
         'type' => 'switcher',
-        'title' => __('Announce Bar','csf'),
+        'title' => __('Bulletin Board','csf'),
         'label' => __('When enabled the bulletin board will be displayed below the front cover','csf'),
         'default' => false
       ),
@@ -1728,7 +1728,7 @@ if( class_exists( 'CSF' ) ) {
       array(
         'id' => 'announce_bar_style',
         'type' => 'radio',
-        'title' => __('Announce Bar Style','csf'),
+        'title' => __('Bulletin Board Style','csf'),
         'dependency' => array( 'announce_bar', '==', 'true' ),
         'options' => array(
           'picture' => 'picture background',//这两个选项要翻译嘛QAQ
@@ -1740,7 +1740,7 @@ if( class_exists( 'CSF' ) ) {
       array(
         'id' => 'announce_bar_icon',
         'type' => 'switcher',
-        'title' => __('Announcement Bar "broadcast" Icon','csf'),
+        'title' => __('Bulletin Board "broadcast" Icon','csf'),
         'dependency' => array( 'announce_bar', '==', 'true' ),
         'label' => __('The "broadcast" icon will be displayed on the left side of the announcement bar','csf'),
         'default' => true
@@ -1749,7 +1749,7 @@ if( class_exists( 'CSF' ) ) {
       array(
         'id' => 'announcement_bg',
         'type' => 'upload',
-        'title' => __('Announcement Bar Background','csf'),
+        'title' => __('Bulletin Board Background','csf'),
         'dependency' => array(
           array( 'announce_bar', '==', 'true' ),
           array( 'announce_bar_style', '==', 'picture' ),
@@ -1762,7 +1762,7 @@ if( class_exists( 'CSF' ) ) {
       array(
         'id' => 'announce_bar_border_color',
         'type' => 'color',
-        'title' => __('Announce Bar Border Color','csf'),
+        'title' => __('Bulletin Board Border Color','csf'),
         'dependency' => array(
           array( 'announce_bar', '==', 'true' ),
           array( 'announce_bar_style', '==', 'pure' ),
@@ -1774,7 +1774,7 @@ if( class_exists( 'CSF' ) ) {
       array(
         'id' => 'announce_text',
         'type' => 'text',
-        'title' => __('Announcement Text','csf'),
+        'title' => __('Bulletin Board Text','csf'),
         'dependency' => array( 'announce_bar', '==', 'true' ),
         'desc' => __('Fill in the announcement text, the text beyond 142 bytes will be hidden','csf'),
       ),
@@ -1782,7 +1782,7 @@ if( class_exists( 'CSF' ) ) {
       array(
         'id' => 'announce_text_align',
         'type' => 'image_select',
-        'title' => __('Announcement Text Alignment','csf'),
+        'title' => __('Bulletin Board Alignment','csf'),
         'dependency' => array( 'announce_bar', '==', 'true' ),
         'options'     => array(
           'left'  => 'https://cdn.jsdelivr.net/gh/Fuukei/Public_Repository@latest/vision/options/announce_text_left.png',
@@ -1795,7 +1795,7 @@ if( class_exists( 'CSF' ) ) {
       array(
         'id' => 'announce_text_color',
         'type' => 'color',
-        'title' => __('Announcement Text Color','csf'),
+        'title' => __('Bulletin Board Text Color','csf'),
         'dependency' => array( 'announce_bar', '==', 'true' ),
         'desc' => __('Customize the colors, suggest using a corresponding color with the background color','csf'),
         'default' => '#999'
@@ -1855,7 +1855,7 @@ if( class_exists( 'CSF' ) ) {
 
   CSF::createSection( $prefix, array(
     'parent' => 'homepage', 
-    'title' => __('Display Area Settings','csf'),
+    'title' => __('Display Area Options','csf'),
     'icon' => 'fa fa-bookmark',
     'fields' => array(
 
@@ -1908,7 +1908,7 @@ if( class_exists( 'CSF' ) ) {
       array(
         'id' => 'exhibition',
         'type' => 'tabbed',
-        'title' => __('Display Area Settings','csf'),
+        'title' => __('Display Area Options','csf'),
         'tabs' => array(
           array(
             'title' => __('First Display Area','csf'),
@@ -2010,7 +2010,7 @@ if( class_exists( 'CSF' ) ) {
 
   CSF::createSection( $prefix, array(
     'parent' => 'homepage', 
-    'title' => __('Article Area Settings','csf'),
+    'title' => __('Article Area Options','csf'),
     'icon'      => 'fa fa-book',
     'fields' => array(
 
@@ -2152,7 +2152,7 @@ if( class_exists( 'CSF' ) ) {
 
   CSF::createSection( $prefix, array(
     'id' => 'page', 
-    'title' => __('Page Settings','csf'),
+    'title' => __('Page Options','csf'),
     'icon' => 'fa fa-file-text',
   ) );
 
@@ -2250,7 +2250,7 @@ if( class_exists( 'CSF' ) ) {
 
   CSF::createSection( $prefix, array(
     'parent' => 'page', 
-    'title' => __('Article Page Settings','csf'),
+    'title' => __('Article Page Options','csf'),
     'icon' => 'fa fa-archive',
     'fields' => array(
 
@@ -2317,7 +2317,7 @@ if( class_exists( 'CSF' ) ) {
       array(
         'id' => 'alipay_code',
         'type' => 'upload',
-        'title' => __('Article Page Appreciation Button Alipay QR Code','csf'),
+        'title' => __('Article Page Appreciation Button (Alipay QR Code)','csf'),
         'desc' => __('Upload Alipay Receipt QR Code Image','csf'),
         'library' => 'image',
       ),
@@ -2325,7 +2325,7 @@ if( class_exists( 'CSF' ) ) {
       array(
         'id' => 'wechat_code',
         'type' => 'upload',
-        'title' => __('Article Page Appreciation Button Wechat QR Code','csf'),
+        'title' => __('Article Page Appreciation Button (Wechat QR Code)','csf'),
         'desc' => __('Upload WeChat Receipt QR Code Image','csf'),
         'library' => 'image',
       ),
@@ -2335,7 +2335,7 @@ if( class_exists( 'CSF' ) ) {
 
   CSF::createSection( $prefix, array(
     'parent' => 'page', 
-    'title' => __('Template Page Settings','csf'),
+    'title' => __('Template Page Options','csf'),
     'icon' => 'fa fa-window-maximize',
     'fields' => array(
 
@@ -2433,8 +2433,8 @@ if( class_exists( 'CSF' ) ) {
         'title' => __('Page Comment Area Display','csf'),
         'desc' => __('You can choose to expand or shirink the content of the comment area','csf'),
         'options' => array(
-          'unfold' => 'expand',//这里似乎也要翻译
-          'fold' => 'shrink',
+          'unfold' => 'Expand',
+          'fold' => 'Shrink',
         ),
         'default' => 'unfold'
       ),
@@ -2503,7 +2503,7 @@ if( class_exists( 'CSF' ) ) {
       array(
         'id' => 'img_upload_api',
         'type' => 'select',
-        'title' => __('Page comment area upload image interface','csf'),
+        'title' => __('Page Comment Area Upload Image Interface','csf'),
         'options' => array(
           'off' => __('Off','csf'),
           'imgur'  => 'Imgur (https://imgur.com)',
@@ -2524,7 +2524,7 @@ if( class_exists( 'CSF' ) ) {
       array(
         'id' => 'imgur_upload_image_proxy',
         'type' => 'text',
-        'title' => __('Imgur upload proxy','csf'),
+        'title' => __('Imgur Upload Proxy','csf'),
         'dependency' => array( 'img_upload_api', '==', 'imgur' ),
         'desc' => __('The proxy used by the backend when uploading images to Imgur. You can refer to the tutorial: https://2heng.xin/2018/06/06/javascript-upload-images-with-imgur-api/','csf'),
         'default' => 'https://api.imgur.com/3/image/'
@@ -2606,7 +2606,7 @@ if( class_exists( 'CSF' ) ) {
 
   CSF::createSection( $prefix, array(
     'parent' => 'others', 
-    'title' => __('Login Screen and Dashboard Related Settings','csf'),
+    'title' => __('Login Screen and Dashboard Related Options','csf'),
     'icon' => 'fa fa-sign-in',
     'fields' => array(
 
@@ -2707,7 +2707,7 @@ if( class_exists( 'CSF' ) ) {
 
   CSF::createSection( $prefix, array(
     'parent' => 'others', 
-    'title' => __('Low Use Settings','csf'),
+    'title' => __('Low Use Options','csf'),
     'icon' => 'fa fa-low-vision',
     'fields' => array(
 
@@ -2717,8 +2717,8 @@ if( class_exists( 'CSF' ) ) {
         'title' => __('Statistics API','csf'),
         'desc' => __('You can choose WP-Statistics plugin statistics or theme built-in statistics to display','csf'),
         'options' => array(
-          'theme_build_in' => 'theme_built_in_statistics',//这里也没翻译
-          'wp_statistics' => 'WP-Statistics plugin statistics',
+          'theme_build_in' => 'Theme Built in Statistics',
+          'wp_statistics' => 'WP-Statistics Plugin Statistics',
         ),
         'default' => 'theme_build_in'
       ),
@@ -2729,7 +2729,7 @@ if( class_exists( 'CSF' ) ) {
         'title' => __('Statistics display format','csf'),
         'desc' => __('You can choose from four different data display formats','csf'),
         'options' => array(
-          'type_1' => '23333 visits',//这里也没翻译
+          'type_1' => '23333 visits',
           'type_2' => '23,333 visits',
           'type_3' => '23,333 visits',
           'type_4' => '23K visits',
@@ -2757,7 +2757,7 @@ if( class_exists( 'CSF' ) ) {
         'id' => 'gravatar_proxy',
         'type' => 'text',
         'title' => __('Gravatar Proxy','csf'),
-        'desc' => __('Fill in the proxy address of Gravatar, use the Geek Nation proxy by default, leave it blank to not use the proxy','csf'),
+        'desc' => __('Fill in the proxy address of Gravatar, use the Geekzu proxy by default, leave it blank to not use the proxy','csf'),
         'default' => 'sdn.geekzu.org/avatar'
       ),
 
@@ -2814,18 +2814,18 @@ if( class_exists( 'CSF' ) ) {
       array(
         'id' => 'code_highlight_method',
         'type' => 'select',
-        'title' => __('Code Highlighter','csf'),
+        'title' => __('Code Highlight Method','csf'),
         'options' => array(
           'hljs' => 'highlight.js',
           'prism' => 'Prism.js',
-          'custom' => 'custom',//翻译
+          'custom' => 'Custom Program',
         ),
         "default" => "hljs"
       ),
       array(
         'id' => 'code_highlight_prism_line_number_all',
         'type' => 'switcher',
-        'title' => __('Prism.js: add line number display for all code blocks','csf'),
+        'title' => __('Prism.js: Add Line Number Display for All Code Blocks','csf'),
         'dependency' => array(
           array( 'code_highlight_method', '==', 'prism' ),
         ),
@@ -2834,7 +2834,7 @@ if( class_exists( 'CSF' ) ) {
       array(
         'id' => 'code_highlight_prism_autoload_path',
         'type' => 'text',
-        'title' => __('Prism.js: autoload address','csf'),
+        'title' => __('Prism.js: Autoload Address','csf'),
         'dependency' => array(
           array( 'code_highlight_method', '==', 'prism' ),
         ),
@@ -2844,7 +2844,7 @@ if( class_exists( 'CSF' ) ) {
       array(
         'id' => 'code_highlight_prism_theme_light',
         'type' => 'text',
-        'title' => __('Prism.js: code highlight theme','csf'),
+        'title' => __('Prism.js: Code Highlight Theme','csf'),
         'desc' => 'Relative to autoload address. Leave blank to use default values',
         'dependency' => array(
           array( 'code_highlight_method', '==', 'prism' ),
@@ -2853,7 +2853,7 @@ if( class_exists( 'CSF' ) ) {
       ), array(
         'id' => 'code_highlight_prism_theme_dark',
         'type' => 'text',
-        'title' => __('Prism.js: code highlight theme in dark mode','csf'),
+        'title' => __('Prism.js: Code Highlight Theme (Dark Mode)','csf'),
         'desc' => 'Relative to autoload address. Leave blank to use default values',
         'dependency' => array(
           array( 'code_highlight_method', '==', 'prism' ),
@@ -2863,21 +2863,21 @@ if( class_exists( 'CSF' ) ) {
       array(
         'type' => 'submessage',
         'style' => 'danger',
-        'content' => __('The following settings are not recommended to be modified blindly, please use them under the guidance of others','csf'),
+        'content' => __('The following Options are not recommended to be modified blindly, please use them under the guidance of others','csf'),
       ),
 
       array(
         'id' => 'image_cdn',
         'type' => 'text',
         'title' => __('Image CDN','csf'),
-        'desc' => __('Note: fill in the format http(s)://your CDN domain/. This means that images with original path http://your.domain/wp-content/uploads/2018/05/xx.png will be loaded from http://your CDN domain/2018/05/xx.png','csf'),
+        'desc' => __('Note: fill in the format https://your CDN domain/. This means that images with original path http://your.domain/wp-content/uploads/2018/05/xx.png will be loaded from http://your CDN domain/2018/05/xx.png','csf'),
         'default' => ''
       ),
 
       array(
         'id' => 'classify_display',
         'type' => 'text',
-        'title' => __('Articles categories that is not displayed ','csf'),
+        'title' => __('Articles Categories (Do not display)','csf'),
         'desc' => __('Fill in category ID, seperate in English" , " when more than one','csf'),
       ),
 
@@ -2912,9 +2912,9 @@ if( class_exists( 'CSF' ) ) {
   ) );
 
   CSF::createSection($prefix, array(
-    'title' => __('Backup Recovery','csf'),
+    'title' => __('Backup&Recovery','csf'),
     'icon'        => 'fa fa-shield',
-    'description' => 'Back up or restore your theme settings',
+    'description' => 'Backup or Recovery your theme options',
     'fields'      => array(
 
         array(
@@ -2979,15 +2979,15 @@ if( class_exists( 'CSF' ) ) {
         'type' => 'radio',
         'title' => __('Theme Update Channel','csf'),
         'dependency' => array(
-          array( 'channel_validate_value', '==', 'I understand the risks associated with testing and am willing to accept all consequences' ),
+          array( 'channel_validate_value', '==', 'I understand the risks associated with testing and accept all consequences' ),
           array( 'local_global_library', '==', 'true' ),
           array( 'iro_update_source', '==', 'official_building' ), array( 'iro_update_source', '==', 'official_building' ),
         ),
         'desc' => __('You can toggle the update channel here to participate in the testing of the new version','csf'),
         'options' => array(
-          'stable' => __('Official channel','csf'),
-          'beta' => __('Public test channel','csf'),
-          'preview' => __('Preview test channel','csf'),
+          'stable' => __('Stable Channel','csf'),
+          'beta' => __('Beta Channel','csf'),
+          'preview' => __('Preview Channel','csf'),
         ),
         'default' => 'stable'
       ),
@@ -3001,15 +3001,15 @@ if( class_exists( 'CSF' ) ) {
         'id' => 'local_global_library',
         'type' => 'switcher',
         'title' => __('Localize the Frontend Library','csf'),
-        'label' => __('The frontend library will not go jsDelivr CDN after turning it on','csf'),
+        'label' => __('The frontend library will not use jsDelivr CDN after turning it on','csf'),
         'default' => false
       ),
 
       array(
         'id' => 'local_application_library',
         'type' => 'switcher',
-        'title' => __('Localize JS/CSS files','csf'),
-        'label' => __('Enabled by default, some JS files and CSS files do not go jsDelivr CDN','csf'),
+        'title' => __('Localize JS/CSS Files','csf'),
+        'label' => __('Enabled by default, some JS files and CSS files do not use jsDelivr CDN','csf'),
         'default' => true
       ),
 
@@ -3020,10 +3020,10 @@ if( class_exists( 'CSF' ) ) {
 
       array(
         'type'    => 'content',
-        'content' => __('<p>The Fluent Design icon references the <a href="https://wwi.lanzous.com/ikyq5kgx0wb">Fluent icon pack designed by Paradox</a></p
-        <p>MuHydro Icons cites the <a href="https://www.coolapk.com/apk/com.muh2.icon">MuHydro Icon Pack designed by Silence</a></p
-        <p>Kanbanma references the <a href="https://github.com/stevenjoezhang/live2d-widget">Live2d-Widget</a> project opened by Stevenjoezhang</p>
-        <p>White Cat Style Logo references the original theme author White Cat, as provided and referenced by <a href="https://hyacm.com/acai/ui/143/sakura-logo/">Hyacm</a></p>','csf'),
+        'content' => __('<p>Fluent Design icon references the <a href="https://wwi.lanzous.com/ikyq5kgx0wb">Fluent icon pack designed by Paradox</a></p
+        <p>MUH2 Icons references the <a href="https://www.coolapk.com/apk/com.muh2.icon">MUH2 Icon Pack designed by Silence</a></p
+        <p>Live2D Model references the <a href="https://github.com/stevenjoezhang/live2d-widget">Live2d-Widget</a> project opened by Stevenjoezhang</p>
+        <p>Mashiro Style Logo references the original theme author Mashiro, as provided and referenced by <a href="https://hyacm.com/acai/ui/143/sakura-logo/">Hyacm</a></p>','csf'),
       ),
 
       array(
@@ -3033,7 +3033,7 @@ if( class_exists( 'CSF' ) ) {
 
       array(
         'type'    => 'content',
-        'content' => __('<p>Static resources rely on the <a href="https://github.com/Fuukei/Public_Repository">Public Repository</a> project created by the theme’s official Fuukei</p>
+        'content' => __('<p>Static resources relies on the <a href="https://github.com/Fuukei/Public_Repository">Public Repository</a> project created by the theme’s official Team Fuukei</p>
         <p>The setup framework relies on the Codestar open source <a href="https://github.com/Codestar/codestar-framework">Codestar-Framework</a> project</p>
         <p>Update function relies on YahnisElsts open source <a href="https://github.com/YahnisElsts/plugin-update-checker">Plugin-Update-Checker</a> project</p>','csf'),
       ),
