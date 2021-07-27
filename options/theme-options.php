@@ -872,6 +872,13 @@ if( class_exists( 'CSF' ) ) {
       ),
 
       array(
+        'id'=>'footer_addition',
+        'type' => 'textarea',
+        'title' => __('Footer Addition','csf'),
+        'desc' => __('Add HTML code at the end of the page. Useful for adding customize JavaScript, or adding external CSS stylesheets.','csf'),
+      ),
+
+      array(
         'type' => 'subheading',
         'content' => __('Hitokoto','csf'),
       ),
