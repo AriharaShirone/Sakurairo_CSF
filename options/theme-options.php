@@ -18,14 +18,14 @@ if( class_exists( 'CSF' ) ) {
         'id'    => 'site_name',
         'type'  => 'text',
         'title' => __('Site Name','csf'),
-        'desc'   => __('For example:Sakurairo Blog','csf'),
+        'desc'   => __('For example: Sakurairo Blog','csf'),
       ),
 
       array(
         'id'    => 'author_name',
         'type'  => 'text',
         'title' => __('Author Name','csf'),
-        'desc'   => __('For example:Fuukei','csf'),
+        'desc'   => __('For example: Fuukei','csf'),
       ),
 
       array(
@@ -273,7 +273,7 @@ if( class_exists( 'CSF' ) ) {
         'id'     => 'global_font_weight',
         'type'   => 'slider',
         'title'  => __('Non-Emphasis Text Weight','csf'),
-        'desc'   => __('Slide to adjust, recommended value range is 300-500','csf'),
+        'desc'   => __('Slide to adjust, the recommended value range is 300-500','csf'),
         'step'   => '10',
         'min'   => '100',
         'max'   => '700',
@@ -284,7 +284,7 @@ if( class_exists( 'CSF' ) ) {
         'id'     => 'global_font_size',
         'type'   => 'slider',
         'title'  => __('Text Font Size','csf'),
-        'desc'   => __('Slide to adjust, recommended value range is 15-18','csf'),
+        'desc'   => __('Slide to adjust, the recommended value range is 15-18','csf'),
         'step'   => '1',
         'unit'    => 'px',
         'min'   => '10',
@@ -1496,7 +1496,7 @@ if( class_exists( 'CSF' ) ) {
         'type' => 'slider',
         'title' => __('Cover Social Area Rounded Corners','csf'),
         'dependency' => array( 'social_area', '==', 'true' ),
-        'desc' => __('Slide to adjust, recommended value range is 10-20','csf'),
+        'desc' => __('Slide to adjust, the recommended value range is 10-20','csf'),
         'unit' => 'px',
         'max' => '30',
         'default' => '15'
@@ -1810,23 +1810,23 @@ if( class_exists( 'CSF' ) ) {
         'id' => 'exhibition_area_title',
         'type' => 'text',
         'title' => __('Display Area Title','csf'),
-        'desc' => __('Default is "display", you can change it to anything else, but of course it CANNOT be used as an ad! Not allowed!!!' ,'csf'),
-        'default' => 'show'
+        'desc' => __('Default is "Show", you can change it to anything else, but of course it CANNOT be used as an ad! Not allowed!!!' ,'csf'),
+        'default' => 'Show'
       ),
 
       array(
         'id' => 'post_area_title',
         'type' => 'text',
         'title' => __('Post Area Title','csf'),
-        'desc' => __('Default is "article", you can change it to anything else, but of course it CANNOT be used as an advertisement! Not allowed!!!' ,'csf'),
-        'default' => 'article'
+        'desc' => __('Default is "Article", you can change it to anything else, but of course it CANNOT be used as an advertisement! Not allowed!!!' ,'csf'),
+        'default' => 'Article'
       ),
 
       array(
         'id' => 'area_title_font',
         'type' => 'text',
         'title' => __('Area Title Font','csf'),
-        'desc' => __('Fill in the font name. For example: Ma Shan Zheng','csf'),
+        'desc' => __('Fill in the font name. For example: Noto Serif SC','csf'),
         'default' => 'Noto Serif SC'
       ),
 
@@ -2158,7 +2158,7 @@ if( class_exists( 'CSF' ) ) {
 
   CSF::createSection( $prefix, array(
     'parent' => 'page', 
-    'title' => __('Integrated Setting','csf'),
+    'title' => __('Integrated Options','csf'),
     'icon' => 'fa fa-compass',
     'fields' => array(
 
