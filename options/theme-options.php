@@ -779,7 +779,7 @@ if( class_exists( 'CSF' ) ) {
         'id' => 'aplayer_playlistid',
         'type' => 'text',
         'title' => __('Footer Online Music Player Songlist ID','csf'),
-        'dependency' => array( 'aplayer_server', '! =', 'off' ),
+        'dependency' => array( 'aplayer_server', '!=', 'off' ),
         'desc' => __('Fill in the song ID, e.g. https://music.163.com/#/playlist?id=5380675133 SongID:5380675133','csf'),
         'default' => '5380675133'
       ),
@@ -788,7 +788,7 @@ if( class_exists( 'CSF' ) ) {
         'id' => 'aplayer_order',
         'type' => 'select',
         'title' => __('Footer Online Music Player Mode','csf'),
-        'dependency' => array( 'aplayer_server', '! =', 'off' ),
+        'dependency' => array( 'aplayer_server', '!=', 'off' ),
         'desc' => __('Select music player mode','csf'),
         'options' => array(
           'list' => __('List','csf'),
@@ -801,7 +801,7 @@ if( class_exists( 'CSF' ) ) {
         'id' => 'aplayer_preload',
         'type' => 'select',
         'title' => __('Footer Online Music Player Preload','csf'),
-        'dependency' => array( 'aplayer_server', '! =', 'off' ),
+        'dependency' => array( 'aplayer_server', '!=', 'off' ),
         'desc' => __('Whether to preload songs','csf'),
         'options' => array(
           'none' => __('Off','csf'),
@@ -815,7 +815,7 @@ if( class_exists( 'CSF' ) ) {
         'id' => 'aplayer_volume',
         'type' => 'slider',
         'title' => __('Default Volume of Footer Online Music Player','csf'),
-        'dependency' => array( 'aplayer_server', '! =', 'off' ),
+        'dependency' => array( 'aplayer_server', '!=', 'off' ),
         'desc' => __('Slide to adjust, the recommended sliding value range is 0.4-0.6','csf'),
         'step' => '0.01',
         'max' => '1',
@@ -873,7 +873,8 @@ if( class_exists( 'CSF' ) ) {
 
       array(
         'id'=>'footer_addition',
-        'type' => 'textarea',
+        'type'     => 'code_editor',
+        'sanitize' => false,
         'title' => __('Footer Addition','csf'),
         'desc' => __('Add HTML code at the end of the page. Useful for adding customize JavaScript, or adding external CSS stylesheets.','csf'),
       ),
@@ -1725,7 +1726,7 @@ if( class_exists( 'CSF' ) ) {
       ),
 
       array(
-        'id' => 'announce_bar',
+        'id' => 'bulletin_board',
         'type' => 'switcher',
         'title' => __('Bulletin Board','csf'),
         'label' => __('When enabled the bulletin board will be displayed below the front cover','csf'),
@@ -1733,10 +1734,10 @@ if( class_exists( 'CSF' ) ) {
       ),
 
       array(
-        'id' => 'announce_bar_style',
+        'id' => 'bulletin_board_style',
         'type' => 'radio',
         'title' => __('Bulletin Board Style','csf'),
-        'dependency' => array( 'announce_bar', '==', 'true' ),
+        'dependency' => array( 'bulletin_board', '==', 'true' ),
         'options' => array(
           'picture' => __('Picture Background','csf'),
           'pure' => __('Color Background','csf'),
@@ -1745,21 +1746,21 @@ if( class_exists( 'CSF' ) ) {
       ),
 
       array(
-        'id' => 'announce_bar_icon',
+        'id' => 'bulletin_board_icon',
         'type' => 'switcher',
         'title' => __('Bulletin Board "Broadcast" Icon','csf'),
-        'dependency' => array( 'announce_bar', '==', 'true' ),
+        'dependency' => array( 'bulletin_board', '==', 'true' ),
         'label' => __('The "Broadcast" icon will be displayed on the left side of the announcement bar','csf'),
         'default' => true
       ),
 
       array(
-        'id' => 'announcement_bg',
+        'id' => 'bulletin_board_bg',
         'type' => 'upload',
         'title' => __('Bulletin Board Background','csf'),
         'dependency' => array(
-          array( 'announce_bar', '==', 'true' ),
-          array( 'announce_bar_style', '==', 'picture' ),
+          array( 'bulletin_board', '==', 'true' ),
+          array( 'bulletin_board_style', '==', 'picture' ),
         ),
         'desc' => __('Best width 820px, best height 67px','csf'),
         'library' => 'image',
@@ -1767,43 +1768,43 @@ if( class_exists( 'CSF' ) ) {
       ),
 
       array(
-        'id' => 'announce_bar_border_color',
+        'id' => 'bulletin_board_border_color',
         'type' => 'color',
         'title' => __('Bulletin Board Border Color','csf'),
         'dependency' => array(
-          array( 'announce_bar', '==', 'true' ),
-          array( 'announce_bar_style', '==', 'pure' ),
+          array( 'bulletin_board', '==', 'true' ),
+          array( 'bulletin_board_style', '==', 'pure' ),
         ),
         'desc' => __('Customize the colors, it is recommended to use a light color that corresponds with the theme color','csf'),
         'default' => '#E6E6E6'
       ),
 
       array(
-        'id' => 'announce_text',
+        'id' => 'bulletin_text',
         'type' => 'text',
         'title' => __('Bulletin Board Text','csf'),
-        'dependency' => array( 'announce_bar', '==', 'true' ),
+        'dependency' => array( 'bulletin_board', '==', 'true' ),
         'desc' => __('Fill in the announcement text, the text beyond 142 bytes will be hidden','csf'),
       ),
 
       array(
-        'id' => 'announce_text_align',
+        'id' => 'bulletin_text_align',
         'type' => 'image_select',
         'title' => __('Bulletin Board Alignment','csf'),
-        'dependency' => array( 'announce_bar', '==', 'true' ),
+        'dependency' => array( 'bulletin_board', '==', 'true' ),
         'options'     => array(
-          'left'  => 'https://cdn.jsdelivr.net/gh/Fuukei/Public_Repository@latest/vision/options/announce_text_left.png',
-          'right'  => 'https://cdn.jsdelivr.net/gh/Fuukei/Public_Repository@latest/vision/options/announce_text_right.png',
-          'center'  => 'https://cdn.jsdelivr.net/gh/Fuukei/Public_Repository@latest/vision/options/announce_text_center.png',
+          'left'  => 'https://cdn.jsdelivr.net/gh/Fuukei/Public_Repository@latest/vision/options/bulletin_text_left.png',
+          'right'  => 'https://cdn.jsdelivr.net/gh/Fuukei/Public_Repository@latest/vision/options/bulletin_text_right.png',
+          'center'  => 'https://cdn.jsdelivr.net/gh/Fuukei/Public_Repository@latest/vision/options/bulletin_text_center.png',
         ),
         'default'     => 'left'
       ),
 
       array(
-        'id' => 'announce_text_color',
+        'id' => 'bulletin_text_color',
         'type' => 'color',
         'title' => __('Bulletin Board Text Color','csf'),
-        'dependency' => array( 'announce_bar', '==', 'true' ),
+        'dependency' => array( 'bulletin_board', '==', 'true' ),
         'desc' => __('Customize the colors, suggest using a corresponding color with the background color','csf'),
         'default' => '#999'
       ),    
@@ -2944,13 +2945,13 @@ if( class_exists( 'CSF' ) ) {
 
       array(
         'type'    => 'content',
-        'content' => __('<img src="https://cdn.jsdelivr.net/gh/Fuukei/Public_Repository@latest/vision/options/hyouryulogo.gif"  alt="Theme Information" />','csf'),
+        'content' => __('<img src="https://cdn.jsdelivr.net/gh/Fuukei/Public_Repository@latest/vision/hyouryu/hyouryulogo.gif"  alt="Theme Information" />','csf'),
       ),
 
       array(
         'type'    => 'submessage',
         'style'   => 'success',
-        'content' => sprintf(__('iro 主题版本 / Theme Version %s | <a href="https://iro.tw">主题文档 / Theme Documentation</a> | <a href="https://github.com/mirai-mamori/Sakurairo">项目地址 / Project Address</a>', 'sakurairo', 'csf'), SAKURA_VERSION), 
+        'content' => sprintf(__('iro 主题版本 / Theme Version %s | <a href="https://iro.tw">主题文档 / Theme Documentation</a> | <a href="https://github.com/mirai-mamori/Sakurairo">项目地址 / Project Address</a>', 'sakurairo', 'csf'), IRO_VERSION), 
       ),
 
       array(
@@ -3028,9 +3029,9 @@ if( class_exists( 'CSF' ) ) {
 
       array(
         'type'    => 'content',
-        'content' => __('<p>Fluent Design Icon Referenced by Paradox<a href="https://wwi.lanzous.com/ikyq5kgx0wb">Fluent Icon Pack</a></p>
-        <p>MUH2 Design Icon Referenced by 缄默<a href="https://www.coolapk.com/apk/com.muh2.icon">MUH2 Icon Pack</a></p>
-        <p>Live2D Model Referenced by Stevenjoezhang<a href="https://github.com/stevenjoezhang/live2d-widget">Live2d-Widget</a>Open Source Project</p>
+        'content' => __('<p>Fluent Design Icon Referenced by Paradox <a href="https://wwi.lanzous.com/ikyq5kgx0wb">Fluent Icon Pack</a></p>
+        <p>MUH2 Design Icon Referenced by 缄默 <a href="https://www.coolapk.com/apk/com.muh2.icon">MUH2 Icon Pack</a></p>
+        <p>Live2D Model Referenced by Stevenjoezhang <a href="https://github.com/stevenjoezhang/live2d-widget">Live2d-Widget</a> Open Source Project</p>
         <p>Mashiro Style Logo References the Original Theme Author Mashiro, As Provided and Referenced by <a href="https://hyacm.com/acai/ui/143/sakura-logo/">Hyacm</a></p>','csf'),
       ),
 
