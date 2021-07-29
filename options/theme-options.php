@@ -1788,14 +1788,14 @@ if( class_exists( 'CSF' ) ) {
       ),
 
       array(
-        'id' => 'bulletin_text_align',
+        'id' => 'bulletin_board_text_align',
         'type' => 'image_select',
         'title' => __('Bulletin Board Alignment','csf'),
         'dependency' => array( 'bulletin_board', '==', 'true' ),
         'options'     => array(
-          'left'  => 'https://cdn.jsdelivr.net/gh/Fuukei/Public_Repository@latest/vision/options/bulletin_text_left.png',
-          'right'  => 'https://cdn.jsdelivr.net/gh/Fuukei/Public_Repository@latest/vision/options/bulletin_text_right.png',
-          'center'  => 'https://cdn.jsdelivr.net/gh/Fuukei/Public_Repository@latest/vision/options/bulletin_text_center.png',
+          'left'  => 'https://cdn.jsdelivr.net/gh/Fuukei/Public_Repository@latest/vision/options/announce_text_left.png',
+          'right'  => 'https://cdn.jsdelivr.net/gh/Fuukei/Public_Repository@latest/vision/options/announce_text_right.png',
+          'center'  => 'https://cdn.jsdelivr.net/gh/Fuukei/Public_Repository@latest/vision/options/announce_text_center.png',
         ),
         'default'     => 'left'
       ),
@@ -2480,6 +2480,18 @@ if( class_exists( 'CSF' ) ) {
       ),
 
       array(
+        'id' => 'ipsource',
+        'type' => 'select',
+        'title' => __('Page Comment Area IP Source','csf'),
+        'desc' => __('You can choose the theme self built IP library or Taobao IP library as the comment location information source','csf'),
+        'options' => array(
+          'type_1' => __('Theme Self Built IP Lib','csf'),
+          'type_2' => __('Taobao IP Lib','csf'),
+        ),
+        'default' => 'type_1'
+      ),
+
+      array(
         'id' => 'comment_private_message',
         'type' => 'switcher',
         'title' => __('Private Comment Function','csf'),
@@ -2847,14 +2859,14 @@ if( class_exists( 'CSF' ) ) {
         'dependency' => array(
           array( 'code_highlight_method', '==', 'prism' ),
         ),
-        'desc' => "Leave blank to use default values",
+        'desc' => __('Leave blank to use default values','csf'),
         'default'=>'https://cdn.jsdelivr.net/npm/prismjs@1.23.0/'
       ),
       array(
         'id' => 'code_highlight_prism_theme_light',
         'type' => 'text',
         'title' => __('Prism.js: Code Highlight Theme','csf'),
-        'desc' => 'Relative to autoload address. Leave blank to use default values',
+        'desc' => __('Relative to autoload address. Leave blank to use default values','csf'),
         'dependency' => array(
           array( 'code_highlight_method', '==', 'prism' ),
         ),
@@ -2863,7 +2875,7 @@ if( class_exists( 'CSF' ) ) {
         'id' => 'code_highlight_prism_theme_dark',
         'type' => 'text',
         'title' => __('Prism.js: Code Highlight Theme (Dark Mode)','csf'),
-        'desc' => 'Relative to autoload address. Leave blank to use default values',
+        'desc' => __('Relative to autoload address. Leave blank to use default values','csf'),
         'dependency' => array(
           array( 'code_highlight_method', '==', 'prism' ),
         ),
