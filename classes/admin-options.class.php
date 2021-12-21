@@ -494,7 +494,7 @@ if ( ! class_exists( 'CSF_Options' ) ) {
     }
 
     public function add_admin_footer_text() {
-      $default = 'Sakurairo 使用 Fuukei <a href="https://github.com/Fuukei/Sakurairo_CSF" target="_blank">Sakurairo CSF</a> 设置框架，感谢你的使用 0v0 ';
+      $default = 'Sakurairo 使用 Fuukei 定制的 <a href="https://github.com/Fuukei/Sakurairo_CSF" target="_blank">CSF</a> 设置框架，感谢你的使用 0v0 ';
       echo ( ! empty( $this->args['footer_credit'] ) ) ? $this->args['footer_credit'] : $default;
     }
 
